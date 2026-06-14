@@ -42,178 +42,84 @@
   </div>
 </header>
 
-<!-- ===== CONTACT LAYOUT ===== -->
+<!-- ===== CONTACT DIRECT ===== -->
 <section class="section">
   <div class="container">
-    <div class="contact-layout">
 
-      <!-- Colonne infos -->
-      <div>
-        <h3 class="contact-info-title">Coordonnées</h3>
+    <!-- Deux stations de contact -->
+    <div class="contact-actions-grid">
 
-        <div class="contact-item">
-          <div class="contact-item-icon">
-            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M17 13.5c-1 .5-2 1-3 1-3 0-8-5-8-8 0-1 .5-2 1-3L5.5 2S4 3 3 5c-1 5 7 13 12 12 2-1 3-2.5 3-2.5L17 13.5z"/>
-            </svg>
-          </div>
-          <div>
-            <div class="contact-item-key">Téléphone</div>
-            <div class="contact-item-val">
-              <a href="tel:+33324574517">03 24 57 45 17</a><br>
-              <small style="color: var(--text-dim); font-size: 0.78rem;">Lun–Ven · 8h–17h</small>
-            </div>
-          </div>
-        </div>
+      <!-- EMAIL -->
+      <a href="mailto:contact@brunelle-sarl.fr" class="contact-action-card">
+        <div class="contact-action-label">// Canal · 01</div>
+        <svg class="contact-action-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4">
+          <rect x="4" y="10" width="36" height="24" rx="2"/>
+          <path d="M4 14l18 12 18-12"/>
+        </svg>
+        <div class="contact-action-type">Par email</div>
+        <div class="contact-action-value">contact@brunelle-sarl.fr</div>
+        <p class="contact-action-note">Plans, devis, questions techniques — joignez vos fichiers PDF, DXF ou STEP directement à votre message.</p>
+        <span class="contact-action-btn">
+          Envoyer un email
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </span>
+        <div class="contact-action-meta">// Réponse sous 48h ouvrées</div>
+      </a>
 
-        <div class="contact-item">
-          <div class="contact-item-icon">
-            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="2" y="4" width="16" height="12" rx="1.5"/>
-              <path d="M2 7l8 5 8-5"/>
-            </svg>
-          </div>
-          <div>
-            <div class="contact-item-key">Email</div>
-            <div class="contact-item-val">
-              <a href="mailto:contact@brunelle-sarl.fr">contact@brunelle-sarl.fr</a>
-              <br><small style="color: var(--text-dim); font-size: 0.78rem;">Adresse à confirmer avec David</small>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-item-icon">
-            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M10 2C6.7 2 4 4.7 4 8c0 5 6 10 6 10s6-5 6-10c0-3.3-2.7-6-6-6z"/>
-              <circle cx="10" cy="8" r="2"/>
-            </svg>
-          </div>
-          <div>
-            <div class="contact-item-key">Adresse</div>
-            <div class="contact-item-val">
-              2 Place des Sources<br>
-              08000 Charleville-Mézières<br>
-              Ardennes · Grand Est
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-item-icon">
-            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
-              <circle cx="10" cy="10" r="8"/>
-              <path d="M10 5v5l3 3"/>
-            </svg>
-          </div>
-          <div>
-            <div class="contact-item-key">Horaires</div>
-            <div class="contact-item-val">
-              Lundi — Vendredi : 8h00 – 17h00<br>
-              <small style="color: var(--text-dim); font-size: 0.78rem;">Horaires à confirmer avec David</small>
-            </div>
-          </div>
-        </div>
-
-        <!-- Carte OpenStreetMap -->
-        <div class="contact-map">
-          <iframe
-            src="https://www.openstreetmap.org/export/embed.html?bbox=4.6900%2C49.7600%2C4.7450%2C49.7850&layer=mapnik&marker=49.7713%2C4.7163"
-            title="Localisation Brunelle SARL — Charleville-Mézières"
-            loading="lazy">
-          </iframe>
-        </div>
-        <a href="https://www.openstreetmap.org/?mlat=49.7713&mlon=4.7163#map=15/49.7713/4.7163" class="map-link" target="_blank" rel="noopener">
-          Ouvrir dans OpenStreetMap →
-        </a>
-      </div>
-
-      <!-- Formulaire -->
-      <div>
-        <div class="contact-form">
-          <div class="form-title">// Formulaire de demande</div>
-
-          <form action="mailto:contact@brunelle-sarl.fr" method="post" enctype="text/plain">
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="nom">Nom *</label>
-                <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
-              </div>
-              <div class="form-group">
-                <label for="prenom">Prénom</label>
-                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="societe">Société *</label>
-              <input type="text" id="societe" name="societe" placeholder="Nom de votre entreprise" required>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="email">Email *</label>
-                <input type="email" id="email" name="email" placeholder="vous@entreprise.fr" required>
-              </div>
-              <div class="form-group">
-                <label for="telephone">Téléphone</label>
-                <input type="tel" id="telephone" name="telephone" placeholder="0X XX XX XX XX">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="type">Type de demande *</label>
-              <select id="type" name="type" required>
-                <option value="" disabled selected>Sélectionner…</option>
-                <option value="devis-outillage">Devis — Outillage de fonderie</option>
-                <option value="devis-usinage">Devis — Usinage de précision</option>
-                <option value="devis-gabarit">Devis — Gabarit de contrôle</option>
-                <option value="renseignement">Renseignement technique</option>
-                <option value="autre">Autre</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="secteur">Secteur industriel</label>
-              <select id="secteur" name="secteur">
-                <option value="" disabled selected>Votre secteur…</option>
-                <option value="ferroviaire">Ferroviaire</option>
-                <option value="defense">Défense</option>
-                <option value="energie">Énergie</option>
-                <option value="automobile">Automobile</option>
-                <option value="aeronautique">Aéronautique</option>
-                <option value="autre">Autre / Général</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="message">Décrivez votre besoin *</label>
-              <textarea id="message" name="message" placeholder="Décrivez votre pièce, matière, dimensions indicatives, quantité, délai souhaité… Plus vous êtes précis, plus vite nous pouvons répondre." required></textarea>
-            </div>
-
-            <p class="form-note">* Champs obligatoires. Vos données ne sont utilisées que pour répondre à votre demande.</p>
-
-            <button type="submit" class="btn btn-primary btn-form">
-              Envoyer la demande
-              <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-            </button>
-
-          </form>
-        </div>
-
-        <!-- Note alternative contact direct -->
-        <div style="margin-top: 16px; padding: 16px 20px; border: 1px solid var(--border); background: var(--surface);">
-          <p style="font-size: 0.8rem; color: var(--text-muted);">
-            <strong style="color: var(--text);">Préférez-vous envoyer vos plans directement ?</strong><br>
-            Envoyez vos fichiers (PDF, DXF, STEP…) par email à
-            <a href="mailto:contact@brunelle-sarl.fr" style="color: var(--accent);">contact@brunelle-sarl.fr</a>
-            ou appelez-nous au <a href="tel:+33324574517" style="color: var(--text);">03 24 57 45 17</a>.
-          </p>
-        </div>
-      </div>
+      <!-- TÉLÉPHONE -->
+      <a href="tel:+33324574517" class="contact-action-card">
+        <div class="contact-action-label">// Canal · 02</div>
+        <svg class="contact-action-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M8 8l5 5-3 3c1 3 6 8 9 9l3-3 5 5-4 4C12 31 4 20 5 12l3-4z"/>
+        </svg>
+        <div class="contact-action-type">Par téléphone</div>
+        <div class="contact-action-value">03 24 57 45 17</div>
+        <p class="contact-action-note">Pour une réponse immédiate, un besoin urgent ou pour discuter d'un projet complexe en direct avec les fabricants.</p>
+        <span class="contact-action-btn">
+          Nous appeler
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </span>
+        <div class="contact-action-meta">// Lun–Ven · 8h00 – 17h00</div>
+      </a>
 
     </div>
+
+    <!-- Infos secondaires -->
+    <div class="contact-secondary">
+      <div class="contact-secondary-item">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M10 2C6.7 2 4 4.7 4 8c0 5 6 10 6 10s6-5 6-10c0-3.3-2.7-6-6-6z"/>
+          <circle cx="10" cy="8" r="2"/>
+        </svg>
+        <div>
+          <div class="contact-secondary-key">Atelier</div>
+          <div class="contact-secondary-val">2 Place des Sources · 08000 Charleville-Mézières<br>Ardennes · Grand Est</div>
+        </div>
+      </div>
+      <div class="contact-secondary-item">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="10" cy="10" r="8"/>
+          <path d="M10 5v5l3 3"/>
+        </svg>
+        <div>
+          <div class="contact-secondary-key">Horaires d'ouverture</div>
+          <div class="contact-secondary-val">Lundi — Vendredi · 8h00 – 17h00</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carte OpenStreetMap -->
+    <div class="contact-map-large">
+      <iframe
+        src="https://www.openstreetmap.org/export/embed.html?bbox=4.6900%2C49.7600%2C4.7450%2C49.7850&layer=mapnik&marker=49.7713%2C4.7163"
+        title="Localisation Brunelle SARL — Charleville-Mézières"
+        loading="lazy">
+      </iframe>
+    </div>
+    <a href="https://www.openstreetmap.org/?mlat=49.7713&mlon=4.7163#map=15/49.7713/4.7163" class="map-link" target="_blank" rel="noopener">
+      Ouvrir dans OpenStreetMap →
+    </a>
+
   </div>
 </section>
 
