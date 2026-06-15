@@ -155,13 +155,9 @@ p  { max-width: 62ch; }
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
-  background: #fff;
-  padding: 6px 14px 6px 10px;
-  border-left: 3px solid var(--accent);
-  box-shadow: 0 1px 8px rgba(0,0,0,0.07);
-  transition: border-color var(--ease), box-shadow var(--ease);
+  transition: opacity var(--ease);
 }
-.nav-logo:hover { border-left-color: #d9421e; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+.nav-logo:hover { opacity: 0.8; }
 .nav-logo img { height: 44px; width: auto; }
 .nav-logo-text { display: flex; flex-direction: column; line-height: 1.15; }
 .nav-logo-name {
@@ -501,23 +497,54 @@ p  { max-width: 62ch; }
   background: var(--text);
   text-align: center; position: relative; overflow: hidden;
 }
+.cta-bg-img {
+  position: absolute; inset: 0; z-index: 0;
+}
+.cta-bg-img img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 65%;
+  opacity: 0.18;
+  filter: grayscale(30%);
+}
 .cta-band::before {
-  content: ''; position: absolute; inset: 0;
+  content: ''; position: absolute; inset: 0; z-index: 1;
   background-image: radial-gradient(circle, rgba(255,255,255,0.025) 1px, transparent 1px);
   background-size: 32px 32px; pointer-events: none;
 }
 .cta-band::after {
-  content: ''; position: absolute;
+  content: ''; position: absolute; z-index: 1;
   bottom: 0; left: 0; right: 0; height: 2px;
   background: linear-gradient(90deg, transparent, var(--accent), transparent);
   opacity: 0.55;
 }
+.cta-band .container { position: relative; z-index: 2; }
 .cta-band .label { justify-content: center; margin-bottom: 16px; color: var(--accent); }
 .cta-band h2 { margin-bottom: 14px; color: #fff; }
 .cta-band p { color: rgba(255,255,255,0.6); margin: 0 auto 40px; text-align: center; max-width: 50ch; }
 .cta-band .btn-ghost { color: rgba(255,255,255,0.85); border-color: rgba(255,255,255,0.28); }
 .cta-band .btn-ghost:hover { border-color: rgba(255,255,255,0.65); background: rgba(255,255,255,0.08); }
 .cta-actions { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+
+/* Photo intro strip — page Contact */
+.photo-intro-strip {
+  position: relative; overflow: hidden; height: 260px;
+}
+.photo-intro-strip img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: 55% 44%;
+  filter: grayscale(15%);
+}
+.photo-intro-strip::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(28,25,23,0.1) 0%, rgba(28,25,23,0.55) 100%);
+}
+.photo-intro-caption {
+  position: absolute; bottom: 24px; left: 0; right: 0; z-index: 1;
+  text-align: center;
+  font-family: var(--font-mono); font-size: 0.72rem;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(247,245,241,0.75);
+}
 
 /* ============================================
    FOOTER
